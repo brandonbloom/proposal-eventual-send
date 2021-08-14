@@ -377,7 +377,7 @@ E(p).foo();
 let qr;
 const q = Promise.delegate(r => qr = r,
                            unfulfilledHandler);
-pr.resolve(q);
+pr(q);
 ```
 
 After `p` is resolved to `q`, the delayed `foo` invocation should be forwarded
